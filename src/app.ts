@@ -29,7 +29,7 @@ const wsHandler = makeBehavior({
     };
 
     const errors = validate(args.schema, args.document);
-    if (errors.length) return errors;
+    if (errors.length > 0) return errors;
     return args;
   },
 });

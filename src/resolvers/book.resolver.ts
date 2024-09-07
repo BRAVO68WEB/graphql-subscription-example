@@ -36,7 +36,7 @@ export const fetchLikesForBookSubscription = {
       ]),
       map(() => BookService.getLikesForBook(id)),
     ),
-  resolve: (links: number | null) => links || 0,
+  resolve: (links: number | null) => links ?? 0,
 };
 
 export const likeBookMutation = (_: any, { id }: { id: string }, context: Context) => {

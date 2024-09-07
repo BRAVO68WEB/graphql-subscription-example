@@ -3,11 +3,16 @@
     "target": "esnext",
     "moduleResolution": "node",
     "module": "commonjs",
-    "sourceMap": true,
+    "sourceMap": false,
     "lib": ["esnext", "DOM", "DOM.Iterable"],
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "outDir": "dist",
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
+  "extends": "@bravo68web/tsconfig/ready.json",
+  "ts-node": {
+    "swc": false
+  }  
 }

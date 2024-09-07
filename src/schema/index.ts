@@ -15,6 +15,7 @@ export const pubSub = createPubSub<{
 export interface Context extends YogaInitialContext {
   pubSub: typeof pubSub;
   jwt?: string;
+  requestId: string;
 }
 
 export const schema = createSchema<Context>({
@@ -38,6 +39,3 @@ export const schema = createSchema<Context>({
   },
   typeDefs,
 });
-
-
-  
